@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elaina Chatbot</title>
+    <link
+      rel="icon"
+      href="{{ url_for('static', filename='Image/elaina-title.png') }}"
+      type="Image"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style/style.css') }}"
+    />
+  </head>
+
+  <body>
+    <div class="header-box">
+      <div class="header">
+        <span class="color-span typing-header">Elaina Bot</span>
+      </div>
+      <div class="views"><span>5K</span> Views</div>
+    </div>
+
+    <div class="chat-container" id="chat-box"></div>
+
+    <div class="input-box">
+      <img
+        src="{{ url_for('static', filename='Image/Char-InputChat.png') }}"
+        class="character-input"
+      />
+
+      <input
+        type="text"
+        placeholder="Berbicara sekarang..."
+        class="chat-input"
+        id="user-input"
+      />
+      <button class="send-btn" id="send-btn">✈️</button>
+    </div>
+
+    <div class="footer-box">
+      <p class="info">Chatbot ini dapat membuat kesalahan. | By ABID</p>
+
+      <audio
+        id="bgm"
+        src="{{ url_for('static', filename='audio/backsound-animenya.mp3') }}"
+        loop
+      ></audio>
+
+      <button id="toggle-audio" class="audio-btn">🔊</button>
+    </div>
+
+    <script src="{{ url_for('static', filename='script/script.js') }}"></script>
+  </body>
+</html>
